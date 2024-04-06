@@ -9,8 +9,8 @@ import Typography from '@mui/material/Typography';
 
 const navItems = [
   {page:"Munaiz Ahmed", route:'/'},
-  {page:"Quantum Cats", route:'/quantum_cats'},
-  {page:"Ordinal Maxi Biz", route:'/omb'},
+  {page:"Quantum Cats", route:'/collections/quantum_cats'},
+  {page:"Ordinal Maxi Biz", route:'/collections/omb'},
 ]
 
 export default function NavBar() {
@@ -25,7 +25,7 @@ export default function NavBar() {
             </Button>
             ))}
             <Typography variant="h6" component="div" sx={{ flexGrow: 1}}></Typography>
-        
+            
         </Toolbar>
       </AppBar>
   );

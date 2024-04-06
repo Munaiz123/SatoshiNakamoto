@@ -1,5 +1,5 @@
 'use client'
-import styles from "../page.module.css";
+import styles from "../../page.module.css";
 import Grid from '@mui/material/Grid';
 import React, { useEffect, useState} from 'react'
 

@@ -1,22 +1,57 @@
 'use client'
-import styles from "../../page.module.css";
-import Grid from '@mui/material/Grid';
 import React, { useEffect, useState} from 'react'
 
-export default function CollectionPage({params}) {
-    const [header, setHeader] = useState('')
+import Grid from '@mui/material/Grid';
+import CollectionTable from './CollectionTable';
+import ToggleButton from '@mui/material/ToggleButton';
+import ViewListIcon from '@mui/icons-material/ViewList';
+import ViewModuleIcon from '@mui/icons-material/ViewModule';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
-    useEffect(() => {
-        setHeader(params.collectionName === 'omb' ? "Ordinal Maxi Biz (OMB)" : "Quantum Cats")
-    })
+import styles from "../../page.module.css";
+
+import { fetchCollection } from '@/untils/service';
+
+
+export default function CollectionPage({params}) {
+
+  const [header, setHeader] = useState('')
+  const [view, setView] = useState('list');
+  const [apiData, setApiData] = useState([])
+
+
+  useEffect(() => {
+    
+    (async () => {
+      let {data} = await fetchCollection(params.collectionName)
+    }) ();
+    
+    setHeader(params.collectionName === 'omb' ? "Ordinal Maxi Biz (OMB)" : "Quantum Cats")
+
+  })
+  
+  const handleChange = (event, nextView) =>  (setView(nextView), console.log(nextView))
 
 
   return (
     <div className={styles.main}>
           <Grid container spacing={3}>
-            <Grid item xs={12}>
-                <h2 className={styles.title}>{header}</h2>
+
+          <Grid item xs={11}>
+              <h1 className={styles.title}>{header}</h1>
             </Grid>
+
+            <Grid item xs={1}>
+                  <ToggleButtonGroup orientation="horizontal" value={view} exclusive sx={{bgcolor:'white'}} onChange={handleChange} >
+                    <ToggleButton value="list" aria-label="list"> <ViewListIcon /> </ToggleButton>
+                    <ToggleButton value="module" aria-label="module"> <ViewModuleIcon /> </ToggleButton>
+                  </ToggleButtonGroup>
+            </Grid>
+            
+            <Grid item xs={12}>
+              <CollectionTable />
+            </Grid>
+
           </Grid>
     </div>
   );

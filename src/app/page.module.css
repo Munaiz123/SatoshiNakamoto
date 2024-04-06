@@ -5,8 +5,11 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  
 }
-
+.title{
+  font-family: monospace;
+}
 .description {
   display: inherit;
   justify-content: inherit;

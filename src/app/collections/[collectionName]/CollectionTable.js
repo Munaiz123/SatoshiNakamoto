@@ -1,35 +1,24 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import Avatar from '@mui/material/Avatar';
+import {headerClassName,convertTimestamp} from '../../../untils/utils'
 
-const headerClassName = 'super-app-theme--header'
+
+
 
 const columns = [
-  { headerClassName, field: 'id', headerName: 'ID', width: 70,  },
-  { headerClassName, field: 'firstName', headerName: 'First name', width: 130 },
-  { headerClassName, field: 'lastName', headerName: 'Last name', width: 130 },
-  {
-    headerClassName, field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 100,
-    color:'black'
-  }
-];
-
-const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { headerClassName, field: 'image_url', headerName: '', width: 120, renderCell:(params)=> <Avatar src={params.value} />},
+  // { headerClassName, field: 'image_url', headerName: 'Token Preview', width: 125, renderCell:(params)=> <Avatar src="https://ord-mirror.magiceden.dev/content/136529d283fcaf1f5fae231bc0182ea2ee88ac4d8106295226a1544727e49f75i0" />},
+  { headerClassName, field: 'inscription_number', headerName: 'Inscription Id', width: 150},
+  { headerClassName, field: 'token_name', headerName: 'Token Name', width: 175 },
+  { headerClassName, field: 'btc_price', headerName: 'Listing Price (btc)', width: 150 },
+  { headerClassName, field: 'satoshi_price', headerName: 'Satoshi Price', width: 150 },
+  { headerClassName, field: 'collection_name', headerName: 'Collection Name', width: 175},
+  { headerClassName, field: 'timestamp', headerName: 'Time Stamp', width: 175, valueGetter:(value) => convertTimestamp(value)}
 ];
 
 
-export default function CollectionTable() {
+export default function CollectionTable({rows}) {
   return (
     <div style={{ height: '%100', width: '100%'}}>
             <DataGrid rows={rows} columns={columns} sx={{bgcolor:'black', color:'white'}} />

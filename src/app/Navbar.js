@@ -9,8 +9,11 @@ import Typography from '@mui/material/Typography';
 
 const navItems = [
   {page:"Munaiz Ahmed", route:'/'},
-  {page:"Quantum Cats", route:'/collections/quantum_cats'},
   {page:"Ordinal Maxi Biz", route:'/collections/omb'},
+  {page:"Quantum Cats", route:'/collections/quantum_cats'},
+  // {page:"Pizza Ninjas", route:'/collections/pizza-ninjas'},
+  // {page:"Tiny Vikings", route:'/collections/tiny_vikings'},
+  {page:"Ordinal Geese", route:'/collections/ordinal_geese'},
 ]
 
 export default function NavBar() {

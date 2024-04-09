@@ -15,7 +15,7 @@ import { fetchCollection } from '@/untils/service';
 
 export default function CollectionPage({params}) {
 
-  const [header, setHeader] = useState('')
+  const [header, setHeader] = useState('Loading')
   const [view, setView] = useState('list');
   const [apiData, setApiData] = useState([])
 
@@ -24,11 +24,13 @@ export default function CollectionPage({params}) {
     
     (async () => {
       let {data} = await fetchCollection(params.collectionName)
+      setHeader(data[0].collection_name)
+      setApiData(data)
     }) ();
     
-    setHeader(params.collectionName === 'omb' ? "Ordinal Maxi Biz (OMB)" : "Quantum Cats")
+    // setHeader(params.collectionName === 'omb' ? "Ordinal Maxi Biz (OMB)" : "Quantum Cats")
 
-  })
+  },[])
   
   const handleChange = (event, nextView) =>  (setView(nextView), console.log(nextView))
 
@@ -49,7 +51,7 @@ export default function CollectionPage({params}) {
             </Grid>
             
             <Grid item xs={12}>
-              <CollectionTable />
+              <CollectionTable rows={apiData}/>
             </Grid>
 
           </Grid>

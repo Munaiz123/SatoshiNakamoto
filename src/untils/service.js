@@ -6,13 +6,9 @@ export const fetchCollection = async (collectionName) =>{
     let response;
 
     try {
-        console.log('headers =>> ', headers)
         response = await axios.get(api,headers)
-        console.log("response ==> ", response)
-        
     } catch (error) {
         console.error('ERROR Fetching Collection: ', error)
-        
     }
     return response
 }

@@ -28,12 +28,10 @@ export default function CollectionPage({params}) {
       setHeader(data[0].collection_name)
       setApiData(data)
     }) ();
-    
-    // setHeader(params.collectionName === 'omb' ? "Ordinal Maxi Biz (OMB)" : "Quantum Cats")
 
   },[])
   
-  const handleChange = (event, nextView) =>  (setView(nextView), console.log(nextView))
+  const handleChange = (event, nextView) =>  (setView(nextView))
 
 
   return (

@@ -3,6 +3,7 @@ import React, { useEffect, useState} from 'react'
 
 import Grid from '@mui/material/Grid';
 import CollectionTable from './CollectionTable';
+import CollectionGrid from './CollectionGrid';
 import ToggleButton from '@mui/material/ToggleButton';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
@@ -51,7 +52,8 @@ export default function CollectionPage({params}) {
             </Grid>
             
             <Grid item xs={12}>
-              <CollectionTable rows={apiData}/>
+            { view === "list" && <CollectionTable rows={apiData}/> }
+            { view !== "list" && <CollectionGrid rows={apiData}/> }
             </Grid>
 
           </Grid>

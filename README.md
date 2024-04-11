@@ -2,7 +2,7 @@
 
 Before cloning the repository to your machine, consider checking out the already deployed user interface at [munaizahmed.com](https://www.munaizahmed.com/).
 
-#### Built With (Dev Dependancies)
+#### Built With (Dev Dependencies)
 - [React](https://react.dev/learn) with [Next.js](https://nextjs.org/docs) was used as the frontend framework for the UI.
 - [Vercel](https://nextjs.org/docs/deployment) Vercel allowed me to spin up a UI quickly and pair it up with a serverless function. Backend details can be found [here](https://github.com/Munaiz123/SatoshiNakamoto_Backend).
 - [Material UI](https://mui.com/material-ui/) was used as the styling and component library to organize NFTs in the UI.

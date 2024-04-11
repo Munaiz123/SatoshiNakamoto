@@ -1,7 +1,5 @@
 # SatoshiNakamoto_FrontEnd (The Interface)
 
-## Introduction 
-
 Before cloning the repository to your machine, consider checking out the already deployed user interface at [munaizahmed.com](https://www.munaizahmed.com/).
 
 #### Built With (Dev Dependancies)

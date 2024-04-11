@@ -33,9 +33,4 @@ The following NFT Collections can be found in the UI:
 #### NFT Collection Data Retrieval (Magic Eden Ordinals API)
 Although Magic Eden did have a free endpoint that I could hit, it was rate-limited and would always give me a ```429``` status code and ```Too Many Requests``` error. 
 
-After requesting an API key with limited validity(one week), I called the ```/tokens?collectionSymbol=t{collectionSymbol}``` endpoint in the backend and saved the data in a postgreSQL database. Hence, the data in the UI not "live" but also comes with the timestamp of when the data collected from the Magic Eden.
-
-
-
-
-
+After requesting an API key with limited validity(one week), I called the ```/tokens?collectionSymbol=t{collectionSymbol}``` endpoint in the [backend](https://github.com/Munaiz123/SatoshiNakamoto_Backend) and saved the data in a postgreSQL database. Hence, the data in the UI not "live" but also comes with the timestamp of when the data collected from the Magic Eden.

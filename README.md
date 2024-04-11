@@ -23,4 +23,4 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 You'll find the root/entry point for the UI at `app/src/layout.js`. 
 
-## Retrieving 
+## Development Implentations 

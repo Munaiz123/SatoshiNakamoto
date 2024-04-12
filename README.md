@@ -6,7 +6,7 @@ Before cloning the repository to your machine, consider checking out the already
 - [React](https://react.dev/learn) with [Next.js](https://nextjs.org/docs) was used as the frontend framework for the UI.
 - [Vercel](https://nextjs.org/docs/deployment) Vercel allowed me to spin up a UI quickly and pair it up with a serverless function. Backend details can be found [here](https://github.com/Munaiz123/SatoshiNakamoto_Backend).
 - [Material UI](https://mui.com/material-ui/) was used as the styling and component library to organize NFTs in the UI.
-- [Axios](https://www.npmjs.com/package/axios) was used to call the exposed api to the backend in `app/src/service/utils/service.js`.
+- [Axios](https://www.npmjs.com/package/axios) was used to call the backend API which you'll find in `app/src/service/utils/service.js`.
 
 ## Getting Started Locally
 
@@ -19,7 +19,8 @@ Start the dev server by via:
 npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-You'll find the root/entry point for the UI at `app/src/layout.js`. 
+
+If you want to explore the code then you'll find the root/entry point for the UI to be in the file `app/src/layout.js`. 
 
 ## NFT Collections
 

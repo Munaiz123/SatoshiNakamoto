@@ -32,6 +32,3 @@ The following NFT Collections can be found in the UI:
 Although Magic Eden did have a free endpoint that I could hit, it was rate-limited and would always give me a ```429``` status code and ```Too Many Requests``` error. 
 
 After requesting an API key from Magic Eden with limited validity(one week), I called the ```/tokens?collectionSymbol=t{collectionSymbol}``` endpoint in the [backend](https://github.com/Munaiz123/SatoshiNakamoto_Backend) and saved the data in a postgreSQL database with the appropriate timestamp.
-
-
-## Reflections

@@ -1,6 +1,6 @@
 # SatoshiNakamoto_FrontEnd (The Interface)
 
-Before cloning the repository to your machine, consider checking out the already deployed user interface at [munaizahmed.com](https://www.munaizahmed.com/).
+### Before cloning the repository to your machine, consider checking out the already deployed user interface at [munaizahmed.com](https://www.munaizahmed.com/).
 
 #### Built With (Dev Dependencies)
 - [React](https://react.dev/learn) with [Next.js](https://nextjs.org/docs) was used as the frontend framework for the UI.
